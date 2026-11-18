@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Smiles Dental — Nipania</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage: #7FA593;
+    --sage-dark: #5E8571;
+    --ivory: #FBF8F3;
+    --ink: #223026;
+    --peach: #F2A679;
+    --peach-dark: #DB8A5C;
+    --line: #E4DED2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Work Sans', sans-serif;
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: 'Lora', serif; font-weight: 600; line-height: 1.25; }
+
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 48px; border-bottom: 1px solid var(--line);
+  }
+  .logo { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; }
+  nav a {
+    color: var(--ink); text-decoration: none; margin-left: 28px; font-size: 15px;
+  }
+
+  .hero {
+    display: flex; align-items: center; gap: 60px;
+    padding: 90px 48px; max-width: 1100px; margin: 0 auto;
+  }
+  .hero-text { flex: 1; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--sage-dark); font-weight: 600; margin-bottom: 14px; display: block;
+  }
+  .hero h1 { font-size: 44px; margin-bottom: 18px; }
+  .hero p { font-size: 17px; color: #4a5c50; max-width: 420px; margin-bottom: 28px; }
+  .btn-primary {
+    background: var(--peach); color: white; border: none; padding: 14px 28px;
+    border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer;
+    font-family: 'Work Sans', sans-serif; transition: background 0.15s ease;
+  }
+  .btn-primary:hover { background: var(--peach-dark); }
+
+  .hero-visual {
+    flex: 1; height: 320px; border-radius: 16px;
+    background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .smile-divider {
+    width: 100%; height: 60px; display: block;
+  }
+
+  section.band { padding: 70px 48px; }
+  .band-inner { max-width: 1100px; margin: 0 auto; }
+
+  .why-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  }
+  .why-card h3 { font-size: 18px; margin-bottom: 10px; }
+  .why-card p { font-size: 14.5px; color: #4a5c50; }
+
+  .services-band { background: var(--sage); color: white; }
+  .services-band h2 { color: white; }
+  .services-list { margin-top: 32px; }
+  .service-row {
+    display: flex; justify-content: space-between; padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+  .service-row:last-child { border-bottom: none; }
+  .service-name { font-size: 16px; font-weight: 500; }
+  .service-price { font-family: 'Lora', serif; font-size: 17px; }
+
+  .hours-contact { display: flex; gap: 60px; }
+  .hours-contact > div { flex: 1; }
+  .hours-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14.5px; }
+  .hours-row span:first-child { color: #4a5c50; }
+
+  footer {
+    padding: 40px 48px; text-align: center; font-size: 13px; color: #4a5c50;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Bright Smiles</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#hours">Hours</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <span class="eyebrow">Dental Care in Nipania</span>
+    <h1>A gentler kind of dentistry.</h1>
+    <p>Friendly, thorough care for the whole family — from routine cleanings to same-week checkups. Chat with our front desk any time, day or night.</p>
+    <button class="btn-primary" onclick="document.getElementById('receptai-bubble')?.click()">Ask a question</button>
+  </div>
+  <div class="hero-visual"></div>
+</div>
+
+<svg class="smile-divider" viewBox="0 0 1200 60" preserveAspectRatio="none">
+  <path d="M0,0 Q600,60 1200,0 L1200,60 L0,60 Z" fill="var(--sage)" opacity="0.08"/>
+</svg>
+
+<section class="band">
+  <div class="band-inner">
+    <h2 style="font-size: 28px; margin-bottom: 40px;">Why patients choose us</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Same-week appointments</h3>
+        <p>We keep slots open for checkups and cleanings — no waiting three weeks for a simple visit.</p>
+      </div>
+      <div class="why-card">
+        <h3>Gentle with kids</h3>
+        <p>Our team specializes in making first visits calm, not scary — for patients of every age.</p>
+      </div>
+      <div class="why-card">
+        <h3>Clear pricing</h3>
+        <p>No surprise bills. You'll know the cost of your visit before you sit in the chair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band services-band" id="services">
+  <div class="band-inner">
+    <h2 style="font-size: 28px;">Services</h2>
+    <div class="services-list">
+      <div class="service-row">
+        <span class="service-name">Teeth Cleaning</span>
+        <span class="service-price">$499</span>
+      </div>
+      <div class="service-row">
+        <span class="service-name">Dental Checkup</span>
+        <span class="service-price">$399</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="hours">
+  <div class="band-inner hours-contact">
+    <div>
+      <h2 style="font-size: 22px; margin-bottom: 18px;">Hours</h2>
+      <div class="hours-row"><span>Monday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Tuesday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Wednesday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Thursday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Friday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Saturday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+    </div>
+    <div id="contact">
+      <h2 style="font-size: 22px; margin-bottom: 18px;">Visit us</h2>
+      <p style="font-size: 14.5px; color: #4a5c50;">
+        Nipania<br>
+        (0823) 889-628<br>
+        arhaanmtiwari@gmail.com
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Bright Smiles Dental. Have a question? Use the chat in the corner — we're happy to help.
+</footer>
+<script>
+  window.Voicecept = { businessId: 'cmsdzbysa000004jxumdll43a' };
+</script>
+<script src="https://voice-cept-one.vercel.app/widget.js" async></script>
+</body>
+</html>
